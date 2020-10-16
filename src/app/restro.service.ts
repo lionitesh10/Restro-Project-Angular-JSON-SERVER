@@ -4,9 +4,12 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class RestroService {
+  url="http://localhost:3000/restros";
   constructor(private http:HttpClient) { }
   getData(){
-    let url="http://localhost:3000/restros";
-    return this.http.get(url)
+    return this.http.get(this.url)
+  }
+  saveRestro(data){
+    return this.http.post(this.url,data)
   }
 }
