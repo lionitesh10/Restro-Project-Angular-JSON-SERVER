@@ -1,1 +1,44 @@
-<p>update works!</p>
+<br />
+<div
+  *ngIf="alert"
+  class="alert alert-success alert-dismissible fade show"
+  role="alert"
+>
+  <strong>Success!! </strong>Data Updated Successfully .
+  <button
+    (click)="clear_alert()"
+    type="button"
+    class="close"
+    data-dismiss="alert"
+    aria-label="Close"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form [formGroup]="editRestro" (ngSubmit)="collection()">
+  <div class="form-group">
+    <label>Name</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Name"
+      formControlName="name"
+    />
+    <label>Address</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Address"
+      formControlName="address"
+    />
+    <label>Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Enter email"
+      formControlName="email"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>

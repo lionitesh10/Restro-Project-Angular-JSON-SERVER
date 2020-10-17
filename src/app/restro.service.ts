@@ -15,4 +15,10 @@ export class RestroService {
   deleteRestro(id){
     return this.http.delete(`${this.url}/${id}`)
   }
+  getCurrentRestro(id){
+    return this.http.get(`${this.url}/${id}`)
+  }
+  updateRestro(id,data){
+    return this.http.put(`${this.url}/${id}`,data)
+  }
 }
