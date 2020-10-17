@@ -12,10 +12,6 @@ const routes: Routes = [
     component:AddComponent
   },
   {
-    path:"list",
-    component:ListComponent
-  },
-  {
     path:"update/:id",
     component:UpdateComponent
   },
@@ -26,7 +22,11 @@ const routes: Routes = [
   {
     path:"register",
     component:RegisterComponent
-  }
+  },
+  {
+    path:"",
+    component:ListComponent
+  },
 ];
 
 @NgModule({

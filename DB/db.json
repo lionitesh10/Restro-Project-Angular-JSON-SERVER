@@ -1,0 +1,22 @@
+{
+  "restros": [
+    {
+      "id": 2,
+      "name": "Tiffin Home",
+      "address": "Chabhil",
+      "email": "thome@test.com"
+    },
+    {
+      "name": "Saandar Momo",
+      "address": "Saraswotinagar,Kathmandu",
+      "email": "saandarmomo@gmail.com",
+      "id": 7
+    },
+    {
+      "name": "Hamro Momo Pasal",
+      "address": "Koteshwor,Kathmandu",
+      "email": "hamromomo10@gmail.com",
+      "id": 8
+    }
+  ]
+}
