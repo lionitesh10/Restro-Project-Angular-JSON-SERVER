@@ -8,7 +8,7 @@ import {RestroService} from '../restro.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-
+  alert:boolean=false
   addRestro=new FormGroup({
     name:new FormControl(''),
     address:new FormControl(),
@@ -21,6 +21,11 @@ export class AddComponent implements OnInit {
     this.restro.saveRestro(this.addRestro.value).subscribe((result)=>{
       console.warn("Service",result)
     })
+    this.alert=true;
+    this.addRestro.reset({})
+  }
+  clear_alert(){
+    this.alert=false
   }
 
   ngOnInit(): void {

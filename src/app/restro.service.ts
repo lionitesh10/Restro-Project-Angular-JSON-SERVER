@@ -12,4 +12,7 @@ export class RestroService {
   saveRestro(data){
     return this.http.post(this.url,data)
   }
+  deleteRestro(id){
+    return this.http.delete(`${this.url}/${id}`)
+  }
 }
