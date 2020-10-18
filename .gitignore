@@ -49,3 +49,5 @@ django_backend/venv/
 django_backend/Restuarant/db.sqlite3
 django_backend/Restuarant/Restuarant/__pycache__
 django_backend/Restuarant/restros/__pycache__
+django_backend/Restuarant/restros/migrations/__pycache__
+
