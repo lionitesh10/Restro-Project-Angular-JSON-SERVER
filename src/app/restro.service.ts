@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class RestroService {
-  url="http://localhost:3000/restros";
+  url="http://localhost:8000/api/restros/";
   constructor(private http:HttpClient) { }
   getData(){
     return this.http.get(this.url)
@@ -13,12 +13,12 @@ export class RestroService {
     return this.http.post(this.url,data)
   }
   deleteRestro(id){
-    return this.http.delete(`${this.url}/${id}`)
+    return this.http.delete(`${this.url}`+`${id}`)
   }
   getCurrentRestro(id){
-    return this.http.get(`${this.url}/${id}`)
+    return this.http.get(`${this.url}`+`${id}`)
   }
   updateRestro(id,data){
-    return this.http.put(`${this.url}/${id}`,data)
+    return this.http.put(`${this.url}`+`${id}`,data)
   }
 }
